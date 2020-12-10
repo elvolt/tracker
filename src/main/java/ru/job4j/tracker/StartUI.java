@@ -11,5 +11,10 @@ public class StartUI {
         System.out.println(created.format(formatter));
         System.out.println("-------------------");
         System.out.println(item);
+        System.out.println("-------------------");
+        Tracker tracker = new Tracker();
+        tracker.add(item);
+        Item finder = tracker.findById(1);
+        System.out.println(finder);
     }
 }
