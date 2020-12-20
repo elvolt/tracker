@@ -14,14 +14,14 @@ public class FindByIdAction implements UserAction {
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        out.println("=== Find Item By Id ===");
+        out.println("=== Find Item By ID ===");
         int id = input.askInt("Enter item's id: ");
         Item item = tracker.findById(id);
         if (item == null) {
-            System.out.println("Id not found");
+            out.println("Id not found");
             return true;
         }
-        System.out.println(item);
+        out.println(item);
         return true;
     }
 }

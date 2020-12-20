@@ -17,11 +17,11 @@ public class ShowAllAction implements UserAction {
         out.println("=== All Items ===");
         Item[] items = tracker.findAll();
         if (items.length == 0) {
-            System.out.println("No Items");
+            out.println("No Items");
             return true;
         }
         for (Item item : items) {
-            System.out.println(item.getId() + " " + item.getName());
+            out.println(item.getId() + " " + item.getName());
         }
         return true;
     }
